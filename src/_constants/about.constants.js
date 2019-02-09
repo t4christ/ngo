@@ -1,0 +1,6 @@
+export const aboutConstants = {
+    ABOUT_REQUEST: 'ABOUT_REQUEST',
+    ABOUT_SUCCESS: 'ABOUT_SUCCESS',
+    ABOUT_FAILURE: 'ABOUT_FAILURE',
+
+}
