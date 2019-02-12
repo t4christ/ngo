@@ -146,8 +146,13 @@ handleSubChange = (event) => {
         this.setState({ submitted: true });
         const { giver,image,sub_cat} = this.state;
         giver["image"]=image
+
+        if(sub_cat.length > 0){
         giver['sub_cat']=sub_cat
-        
+        }
+        else{
+            giver['sub_cat'] = 'Not Available'
+        }
         
         const { dispatch } = this.props;
         // alert(giver.category)
