@@ -459,7 +459,7 @@ isEmpty(obj) {
 
    
     
-    {    currentPage === last? <li className="disabled">  <a href="#! disabled" style={{display:'flex'}}> <i className="material-icons">chevron_left </i><span>Next</span></a> </li>:
+    {    currentPage === last? <li className="disabled">  <a href="#! disabled" style={{display:'flex'}}> <i className="material-icons">chevron_right </i><span>Next</span></a> </li>:
    <li> <a href="#!" style={{display:'flex'}}><i onClick={this.handleClick} id={pageNumbers[currentPage]} href={pageNumbers[currentPage]}className="material-icons">chevron_right </i><span onClick={this.handleClick} id={pageNumbers[currentPage]} href={pageNumbers[currentPage]}>Next</span></a>
      </li>
     }
