@@ -204,7 +204,7 @@ isEmpty(obj) {
         let indexOfLastGift = currentPage * giftsPerPage;
         let indexOfFirstGift = indexOfLastGift - giftsPerPage;
         let currentGifts;
-        if(givers.hasOwnProperty('items')&& givers.items.length > 0 ){
+        if(givers.hasOwnProperty('items')&& typeof(givers.items) !== 'undefined' ){
             currentGifts = givers.items.slice(indexOfFirstGift, indexOfLastGift);
             last = Math.ceil(givers.items.length/giftsPerPage);
         }
@@ -442,10 +442,10 @@ isEmpty(obj) {
 
 {/* Pagination Area */}
 
-<ul class="pagination" style={{display:"flex",float:"right"}}>
+<ul className="pagination" style={{display:"flex",float:"right"}}>
 
-    {currentPage === 1 ? <li class="disabled"><a href="#! disabled" style={{display:'flex'}}> <span>Prev</span> <i class="material-icons">chevron_left </i></a></li> :
-    <li><a href="#!" style={{display:'flex'}}><span onClick={this.handleClick} id={prev} href={prev}>Prev</span><i onClick={this.handleClick} id={prev} href={prev} class="material-icons">chevron_left </i></a>
+    {currentPage === 1 ? <li className="disabled"><a href="#! disabled" style={{display:'flex'}}> <span>Prev</span> <i className="material-icons">chevron_left </i></a></li> :
+    <li><a href="#!" style={{display:'flex'}}><span onClick={this.handleClick} id={prev} href={prev}>Prev</span><i onClick={this.handleClick} id={prev} href={prev} className="material-icons">chevron_left </i></a>
     </li>
     }
   
@@ -459,8 +459,8 @@ isEmpty(obj) {
 
    
     
-    {    currentPage === last? <li class="disabled">  <a href="#! disabled" style={{display:'flex'}}> <i class="material-icons">chevron_left </i><span>Next</span></a> </li>:
-   <li> <a href="#!" style={{display:'flex'}}><i onClick={this.handleClick} id={pageNumbers[currentPage]} href={pageNumbers[currentPage]}class="material-icons">chevron_right </i><span onClick={this.handleClick} id={pageNumbers[currentPage]} href={pageNumbers[currentPage]}>Next</span></a>
+    {    currentPage === last? <li className="disabled">  <a href="#! disabled" style={{display:'flex'}}> <i className="material-icons">chevron_left </i><span>Next</span></a> </li>:
+   <li> <a href="#!" style={{display:'flex'}}><i onClick={this.handleClick} id={pageNumbers[currentPage]} href={pageNumbers[currentPage]}className="material-icons">chevron_right </i><span onClick={this.handleClick} id={pageNumbers[currentPage]} href={pageNumbers[currentPage]}>Next</span></a>
      </li>
     }
    
